@@ -1,0 +1,78 @@
+<html>
+<head>
+<script>
+function validateForm() 
+{
+  var fname = document.getElementById("fname").value;
+  var lname = document.getElementById("lname").value;
+  var id = document.getElementById("id").value;
+  var password = document.getElementById("password").value;
+  var gmail = document.getElementById("gmail").value;
+  
+  if (fname == "" ) {
+    //alert("value can not be empty");
+	document.getElementById("fnameErr").innerHTML="name can not be empty";
+    //return false;
+  }
+  else
+  {
+ 
+    return true;
+  }
+  if ( lname == "" ) {
+    //alert("lname can not be empty");
+document.getElementById("lnameErr").innerHTML="name can not be empty";
+    //return false;
+  }
+  else
+  {
+   
+    return true;
+  }
+  if (id == "" ) {
+    //alert("id can not be empty");
+document.getElementById("idErr").innerHTML="id can not be empty";
+    //return false;
+  }
+  else
+  {
+   
+    return true;
+  }
+  if ( password == "" ) {
+    //alert("password can not be empty");
+	document.getElementById("passwordErr").innerHTML="password can not be empty";
+    //eturn false;
+  }
+  else
+  {
+   
+    return true;
+  }
+  if ( gmail == "") {
+    //alert("gmail can not be empty");
+	document.getElementById("gmailErr").innerHTML="gmail can not be empty";
+    return false;
+  }
+  else
+  {
+   
+    return true;
+  }
+
+}
+</script>
+</head>
+<body>
+
+<form name="mosabbir"  onsubmit="return validateForm()" method="post">
+  First Name:<input type="text" id="fname" name="fname"><br><p id="fnameErr"></p>
+  Last Name: <input type="text" id="lname" name="lname"><br><p id="lnameErr"></p>
+  id:        <input type="text" id="id" name="id"><br><p id="idErr"></p>
+  password:  <input type="text" id="password" name="password"><br><p id="passwordErr"></p> 
+  gmail:     <input type="text" id="gmail" name="gmail"><br><p id="gmailErr"></p>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
